@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legend of PFD Symbols · Riyan Journal</title>
+  <!-- Font Awesome & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- sedikit penyesuaian khusus halaman artikel (opsional) -->
+  <style>
+    .article-hero {
+      background: linear-gradient(145deg, var(--primary-light) 0%, var(--bg-white) 100%);
+      padding: 48px 0 32px;
+      margin-bottom: 32px;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .article-hero-content {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .article-meta-large {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      color: var(--text-muted);
+      margin: 16px 0 8px;
+    }
+    .featured-image {
+      margin: 32px 0;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+    .article-body {
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR (sama dengan index) -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Riyan<span>Journal</span></a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html#home" class="nav-link">Home</a></li>
+        <li><a href="#articles" class="nav-link">Articles</a></li>
+        <li><a href="#media" class="nav-link">Media</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="dark-toggle" id="darkModeToggle" aria-label="Dark mode toggle">
+          <i class="fas fa-moon"></i>
+        </button>
+        <div class="hamburger" id="hamburger">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO (khusus halaman artikel) -->
+  <section class="article-hero">
+    <div class="container article-hero-content">
+      <span class="hero-tag" style="background: var(--primary); color:white;">📘 Apendix</span>
+      <h1 style="font-size: 3rem; margin: 20px 0;">Legend of PFD Symbols</h1>
+      <div class="article-meta-large">
+        <span><i class="far fa-user-circle"></i> Riyan Setiawan</span>
+        <span><i class="far fa-calendar-alt"></i> April 12, 2026</span>
+        <span><i class="far fa-clock"></i> 8 min read</span>
+      </div>
+    </div>
+  </section>
+
+  <main class="container main-grid" style="margin-bottom: 48px;">
+    <!-- KOLOM ARTIKEL -->
+    <article class="blog-post" style="padding: 0; box-shadow: none; background: transparent;">
+      <div class="featured-image">
+        <img class="preview-img" class="preview-img" src="image/pfd.jfif" alt="Project based learning">
+      </div class="articles">
+      <div class="article-body" id="articles">
+        <p><strong>Process Flow Diagram (PFD)</strong> adalah diagram yang digunakan untuk menggambarkan aliran proses dalam suatu sistem industri, khususnya pada bidang teknik kimia dan proses. Diagram ini menampilkan hubungan antar peralatan utama, jalur aliran material, serta kondisi operasi secara umum seperti suhu dan tekanan. PFD berfungsi sebagai gambaran makro (overview) dari suatu proses, sehingga memudahkan engineer dalam memahami bagaimana bahan baku diolah menjadi produk melalui serangkaian unit operasi. Berbeda dengan diagram yang lebih detail seperti P&ID, PFD tidak menampilkan instrumen kontrol secara rinci, melainkan fokus pada aliran proses dan peralatan utama.</p>
+        <blockquote>“Dalam PFD, setiap peralatan dan elemen proses direpresentasikan menggunakan simbol standar agar mudah dipahami secara universal.” </blockquote>
+        
+        <h2>Process Equipment (Peralatan Proses Utama)</h2><br>
+        <figure class="post-image">
+            <img class="preview-img" class="preview-img" src="image/pfd1.jfif" alt="Placeholder: pfd1">
+        </figure>
+        <p>Kategori ini merupakan inti dari Process Flow Diagram karena berisi unit operasi utama tempat terjadinya perubahan fisik maupun kimia. Setiap simbol dalam kategori ini merepresentasikan peralatan yang memiliki fungsi spesifik dalam mengolah material dari bahan baku menjadi produk. Dalam PFD, simbol-simbol ini biasanya digambar lebih besar dan mencolok karena menjadi fokus utama alur proses. Pemahaman terhadap simbol ini sangat penting karena menentukan bagaimana seseorang membaca keseluruhan proses industri.</p>
+        <ul style="margin-left: 24px; margin-bottom: 24px;">
+          <li><strong>Reactor (CSTR / PFR)</strong> → unit tempat berlangsungnya reaksi kimia, bisa kontinu atau aliran plug.</li>
+          <li><strong>Distillation Column</strong> → memisahkan campuran berdasarkan perbedaan titik didih (volatilitas)</li>
+          <li><strong>Heat Exchanger (Shell & Tube, Plate)</strong> → mentransfer panas antar dua fluida tanpa bercampur</li>
+          <li><strong>Mixer / Agitator Tank</strong> → mencampur beberapa komponen hingga homogen</li>
+          <li><strong>Evaporator</strong> → menguapkan pelarut untuk meningkatkan konsentrasi larutan</li>
+          <li><strong>Furnace / Heater</strong> → memanaskan fluida secara langsung</li>
+          <li><strong>Cooler / Condenser</strong> → menurunkan suhu atau mengubah uap menjadi cair</li>
+        </ul>
+
+        <h2>Fluid Handling Equipment (Peralatan Aliran Fluida)</h2><br>
+        <figure class="post-image">
+            <img class="preview-img" class="preview-img" src="image/pfd2.jfif" alt="Placeholder: pfd2">
+        </figure>
+        <p>Kategori ini mencakup peralatan yang berfungsi untuk memindahkan fluida atau mengubah energi yang dimilikinya. Dalam suatu proses industri, fluida tidak bisa bergerak sendiri tanpa bantuan energi tambahan, sehingga peralatan ini menjadi penggerak utama aliran. Simbol dalam kategori ini biasanya menunjukkan arah aliran dan jenis energi yang digunakan atau dihasilkan.</p>
+        <ul style="margin-left: 24px; margin-bottom: 24px;">
+          <li><strong>Pump (Centrifugal, Positive Displacement)</strong> → memindahkan fluida cair dengan menaikkan tekanan</li>
+          <li><strong>Compressor</strong> → meningkatkan tekanan gas agar dapat dialirkan atau diproses</li>
+          <li><strong>Blower / Fan</strong> → mengalirkan gas pada tekanan rendah</li>
+          <li><strong>Vacuum Pump</strong> → menciptakan kondisi tekanan rendah (vakum)</li>
+          <li><strong>Turbine</strong> → mengubah energi fluida menjadi energi mekanik</li>
+        </ul>
+
+        <h2>Separation Equipment (Peralatan Pemisahan)</h2><br>
+        <figure class="post-image">
+            <img class="preview-img" class="preview-img" src="image/pfd4.jfif" alt="Placeholder: pfd3">
+        </figure>
+        <p>Dalam banyak proses industri, tahap pemisahan merupakan bagian krusial untuk mendapatkan produk yang diinginkan. Kategori ini mencakup berbagai peralatan yang digunakan untuk memisahkan komponen berdasarkan sifat fisik seperti ukuran partikel, densitas, atau fase. Simbol-simbol ini membantu menunjukkan di mana proses pemurnian atau pemisahan terjadi dalam alur proses.</p>
+        <ul style="margin-left: 24px; margin-bottom: 24px;">
+          <li><strong>Flash Drum</strong> → memisahkan campuran menjadi fase cair dan gas akibat perubahan tekanan</li>
+          <li><strong>Cyclone Separator</strong> → memisahkan partikel padat dari gas menggunakan gaya sentrifugal</li>
+          <li><strong>Filter</strong> → menyaring padatan dari fluida</li>
+          <li><strong>Centrifuge</strong> → memisahkan komponen berdasarkan perbedaan densitas dengan putaran tinggi</li>
+          <li><strong>Decanter</strong> → memisahkan dua cairan yang tidak saling larut</li>
+        </ul>
+
+        <h2>Storage & Containment (Penyimpanan & Penampungan)</h2><br>
+        <figure class="post-image">
+            <img class="preview-img" class="preview-img" src="image/pfd3.jfif" alt="Placeholder: pfd4">
+        </figure>
+        <p>Kategori ini mencakup peralatan yang berfungsi sebagai tempat penyimpanan atau penampungan material selama proses berlangsung. Dalam sistem industri, tidak semua material langsung diproses secara kontinu, sehingga diperlukan unit penyimpanan sebagai buffer untuk menjaga kestabilan aliran. Simbol dalam kategori ini biasanya berbentuk bejana atau tangki dengan variasi tergantung kondisi operasi.</p>
+        <ul style="margin-left: 24px; margin-bottom: 24px;">
+          <li><strong>Storage Tank (Vertical / Horizontal)</strong> → menyimpan bahan baku, produk, atau intermediate</li>
+          <li><strong>Pressure Vessel</strong> → menyimpan fluida pada tekanan tinggi</li>
+          <li><strong>Silo / Hopper</strong> → menyimpan material padat dalam jumlah besar</li>
+          <li><strong>Cryogenic Tank</strong> → menyimpan fluida pada suhu sangat rendah</li>
+        </ul>
+
+        <h2>Piping & Flow Lines (Perpipaan dan Aliran)</h2><br>
+        <figure class="post-image">
+            <img class="preview-img" class="preview-img" src="image/pfd5.jfif" alt="Placeholder: pfd5">
+        </figure>
+        <p>Piping dan flow lines merupakan elemen penghubung dalam PFD yang menunjukkan jalur perpindahan material antar peralatan. Tanpa elemen ini, diagram tidak akan memiliki alur yang jelas. Jenis garis dan simbol panah yang digunakan memberikan informasi penting mengenai arah aliran, jenis fluida, dan hubungan antar unit operasi.</p>
+        <ul style="margin-left: 24px; margin-bottom: 24px;">
+          <li><strong>Solid Line</strong> → aliran utama proses</li>
+          <li><strong>Dashed Line</strong> → aliran tambahan atau sekunder</li>
+          <li><strong>Arrow (→)</strong> → menunjukkan arah aliran</li>
+          <li><strong>Branch Line</strong> → percabangan aliran</li>
+          <li><strong>Line Code</strong> → menunjukkan jenis fluida (gas, cair, slurry)</li>
+        </ul>
+
+        <h2>Valves (Katup)</h2><br>
+        <figure class="post-image">
+            <img class="preview-img" class="preview-img" src="image/pfd6.jfif" alt="Placeholder: pfd6">
+        </figure>
+        <p>Valve merupakan komponen penting dalam sistem perpipaan yang berfungsi untuk mengatur, mengarahkan, atau menghentikan aliran fluida. Dalam PFD, valve biasanya ditampilkan secara sederhana tanpa detail kontrol yang kompleks, namun tetap memberikan informasi bahwa terdapat titik pengendalian dalam sistem.</p>
+        <ul style="margin-left: 24px; margin-bottom: 24px;">
+          <li><strong>Gate Valve</strong> → membuka atau menutup aliran secara penuh</li>
+          <li><strong>Globe Valve</strong> → mengatur laju aliran dengan lebih presisi</li>
+          <li><strong>Ball Valve</strong> → kontrol cepat (on/off)</li>
+          <li><strong>Check Valve</strong> → mencegah aliran balik</li>
+          <li><strong>Relief Valve</strong> → mmelindungi sistem dari tekanan berlebih</li>
+        </ul>
+
+        <h2>Heat Transfer Utilities (Utilitas Panas)</h2><br>
+        <figure class="post-image">
+            <img class="preview-img" class="preview-img" src="image/pfd7.jfif" alt="Placeholder: pfd7">
+        </figure>
+        <p>Kategori ini menunjukkan sistem utilitas yang mendukung proses utama, khususnya dalam hal pengaturan energi panas. Utilitas ini tidak terlibat langsung dalam reaksi, tetapi sangat penting untuk menjaga kondisi operasi tetap optimal.</p>
+        <ul style="margin-left: 24px; margin-bottom: 24px;">
+          <li><strong>Steam Line</strong> → digunakan sebagai sumber panas</li>
+          <li><strong>Cooling Water</strong> → digunakan untuk pendinginan</li>
+          <li><strong>BThermal Oil</strong> → media pemanas suhu tinggi</li>
+          <li><strong>Condensate Return</strong> → aliran balik hasil kondensasi uap</li>
+        </ul>
+
+        <h2>Stream Information (Data Aliran)</h2><br>
+        <p>Selain simbol visual, PFD juga dilengkapi dengan informasi numerik yang memberikan detail kondisi operasi. Data ini biasanya ditampilkan dalam bentuk label atau tabel kecil di dekat aliran, dan sangat penting untuk analisis teknik.</p>
+        <ul style="margin-left: 24px; margin-bottom: 24px;">
+          <li><strong>Stream Number</strong> → identitas aliran</li>
+          <li><strong>Temperature (T)</strong> → suhu fluida</li>
+          <li><strong>Pressure (P)</strong> → tekanan fluida</li>
+          <li><strong>Flow Rate (F)</strong> → laju aliran</li>
+          <li><strong>Composition</strong> → komposisi zat dalam aliran</li>
+        </ul>
+
+        <h2>Instrumentation Symbols (Instrumen Pengukuran & Monitoring)</h2><br>
+        <figure class="post-image">
+            <img class="preview-img" class="preview-img" src="image/pfd9.jfif" alt="Placeholder: pfd9">
+        </figure>
+        <p>Selain peralatan utama, dalam PFD juga mulai diperkenalkan simbol instrumen meskipun tidak sedetail P&ID. Instrumen ini berfungsi untuk memantau kondisi proses agar tetap sesuai dengan parameter yang diinginkan. Biasanya simbolnya berupa lingkaran (instrument bubble) dengan kode huruf tertentu yang menunjukkan jenis pengukuran.</p>
+        <ul style="margin-left: 24px; margin-bottom: 24px;">
+          <li><strong>TI (Temperature Indicator)</strong> → menunjukkan suhu fluida</li>
+          <li><strong>PI (Pressure Indicator)</strong> → menunjukkan tekanan</li>
+          <li><strong>FI (Flow Indicator)</strong> → menunjukkan laju aliran</li>
+          <li><strong>LI (Level Indicator)</strong> → menunjukkan ketinggian fluida dalam tangki</li>
+          <li><strong>AI (Analyzer Indicator)</strong> → menunjukkan komposisi atau kualitas fluida</li>
+        </ul>
+
+        <h2>Control Instruments (Pengendali Proses)</h2><br>
+        <figure class="post-image">
+            <img class="preview-img" class="preview-img" src="image/pfd10.jfif" alt="Placeholder: pfd10">
+        </figure>
+        <p>Kategori ini berkaitan dengan sistem kontrol yang menjaga proses tetap stabil. Walaupun di PFD tidak digambar secara kompleks, biasanya tetap ditunjukkan hubungan dasar antara sensor, controller, dan actuator. Tujuannya agar pembaca tahu bahwa sistem tersebut dikendalikan secara otomatis.</p>
+        <ul style="margin-left: 24px; margin-bottom: 24px;">
+          <li><strong>TC (Temperature Controller)</strong> → mengontrol suhu</li>
+          <li><strong>PC (Pressure Controller)</strong> → mengontrol tekanan</li>
+          <li><strong>FC (Flow Controller)</strong> → mengontrol laju aliran</li>
+          <li><strong>LC (Level Controller)</strong> → mengontrol level fluida</li>
+          <li><strong>Control Valve</strong> → aktuator yang menyesuaikan aliran berdasarkan sinyal controller</li>
+        </ul>
+
+        <!-- embedded video -->
+        <div class="video-wrapper">
+          <video controls>
+            <source src="video/videoplayback5.mp4" type="video/mp4">
+            Browser kamu tidak mendukung video.
+          </video>
+        </div>
+      </div>
+    </article>
+
+    <!-- FOOTER -->
+  <!-- SIDEBAR -->
+        <aside class="sidebar">
+          <div class="sidebar-widget">
+            <h3><i class="fas fa-fire"></i> Popular posts</h3>
+            <ul class="popular-list">
+              <li><a href="#">The science of effective note-taking</a><span>12k views</span></li>
+              <li><a href="#">Why spaced repetition works</a><span>8.4k views</span></li>
+              <li><a href="#">Blended learning trends 2026</a><span>6.2k views</span></li>
+              <li><a href="#">AI literacy for Riyancators</a><span>5.7k views</span></li>
+            </ul>
+          </div>
+          <div class="sidebar-widget">
+            <h3><i class="fas fa-folder-open"></i> Categories</h3>
+            <ul class="category-list">
+              <li><a href="#">EdTech <span>(14)</span></a></li>
+              <li><a href="#">Pedagogy <span>(9)</span></a></li>
+              <li><a href="#">Research <span>(7)</span></a></li>
+              <li><a href="#">Student life <span>(12)</span></a></li>
+              <li><a href="#">Policy <span>(5)</span></a></li>
+            </ul>
+          </div>
+          <div class="sidebar-widget">
+            <h3><i class="fas fa-tags"></i> Tags</h3>
+            <div class="tag-cloud">
+              <a href="#" class="tag">#learning</a>
+              <a href="#" class="tag">#OER</a>
+              <a href="#" class="tag">#inclusion</a>
+              <a href="#" class="tag">#online</a>
+              <a href="#" class="tag">#STEM</a>
+              <a href="#" class="tag">#literacy</a>
+              <a href="#" class="tag">#future</a>
+              <a href="#" class="tag">#k12</a>
+            </div>
+          </div>
+        </aside>
+      </main>
+
+    <!-- CONTENT CARDS SECTION (grid) -->
+    <section class="cards-section fade-on-scroll">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">📚 Artikel Lain</h2>
+          <p class="section-subtitle">Discover more insights, guides and stories</p>
+        </div>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-img">
+              <img class="preview-img" class="preview-img" src="image/hasad.webp" alt="Placeholder article" loading="lazy">
+            </div>
+            <div class="card-content">
+              <span class="card-category">EdTech</span>
+              <h3>HAZOP dan HAZID</h3>
+              <p>HAZOP (Hazard and Operability Study) dan HAZID (Hazard Identification) adalah dua metode penting dalam manajemen risiko.
+              </p>
+              <a href="artikel-2.html" class="btn-card">Read more <i class="fas fa-chevron-right"></i></a>
+            </div>
+          </article>
+          <article class="card" >
+            <div class="card-img">
+              <img class="preview-img" class="preview-img" src="image/OIP.webp" alt="Placeholder article" loading="lazy">
+            </div>
+            <div class="card-content">
+              <span class="card-category">LINKING</span>
+              <h3>Fastener, Joint, dan Support</h3>
+              <p>Fastener, Joint dan Support sangat penting untuk memastikan komponen yang kita punya bisa tersambung dengan baik.
+              </p>
+              <a href="index.html" class="btn-card">Read more <i class="fas fa-chevron-right"></i></a>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-img">
+              <img class="preview-img" class="preview-img" src="image/pipe.webp" alt="Placeholder article" loading="lazy">
+            </div>
+            <div class="card-content">
+              <span class="card-category">PIPING</span>
+              <h3>Pipe SchRiyanle dan Macam-Macam Pewarnaan Pipa (Pipeline Color Coding)</h3>
+              <p>Pipe schRiyanle diklasifikasikan berdasarkan angka schRiyanle yang menunjukkan tingkat ketebalan dinding pipa.</p>
+              <a href="artikel-3.html" class="btn-card">Read more <i class="fas fa-chevron-right"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEDIA SECTION (gallery + video embed) -->
+    <section class="media-section fade-on-scroll" id="media">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">🎬 Media & resources</h2>
+        </div>
+        <div class="media-grid">
+          <div class="gallery">
+            <h3><i class="far fa-images"></i> Image gallery</h3>
+            <div class="gallery-grid">
+              <img class="preview-img" src="image/media2.webp" alt="campus life">
+              <img class="preview-img" src="image/media3.webp" alt="library">
+              <img class="preview-img" src="image/media 4.png" alt="workshop">
+              <img class="preview-img" src="image/fastener & joint.jpg" alt="study group">
+            </div>
+          </div>
+          <div class="featured-video">
+            <h3><i class="fas fa-video"></i> Featured talk</h3>
+              <div class="video-wrapper">
+                <video controls>
+                  <source src="video/videoplayback4.mp4" type="video/mp4">
+                  Browser kamu tidak mendukung video.
+                </video>
+              </div>
+            <p class="video-caption">Memahami Kekuatan</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <div id="contact">
+    <div class="contact">
+      <footer class="footer" id="about">
+        <div class="container footer-container">
+          <div class="footer-col footer-about">
+            <h3>Riyan<span>Insight</span></h3>
+            <p>Empowering Riyancators and learners with evidence-based insights, tools, and stories. Lorem ipsum dolor sit amet consectetur.</p>
+            <div class="social-links">
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#articles">Articles</a></li>
+              <li><a href="#media">Media</a></li>
+              <li><a href="#">Newsletter</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Privacy policy</a></li>
+              <li><a href="#">Terms</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Subscribe</h4>
+            <p>Get the latest posts in your inbox.</p>
+            <form class="footer-form">
+              <input type="email" placeholder="Your email" aria-label="Email">
+              <button type="submit"><i class="fas fa-paper-plane"></i></button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="container footer-bottom-content">
+            <p>© 2026 Riyan Journal. All rights reserved. — designed for modern learners</p>
+            <div class="footer-links">
+              <a href="#">Accessibility</a>
+              <a href="#">Cookies</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="imageModal" class="image-modal"> 
+  <span class="close">&times;</span>
+  <img class="preview-img" class="modal-content" id="modalImg">
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

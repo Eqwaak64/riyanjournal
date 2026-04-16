@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Augmented Reality in Class · Riyan Journal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Layout berbeda: full-width image di atas, lalu teks dua kolom */
+    .article-fullwidth {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .two-column-text {
+      column-count: 2;
+      column-gap: 40px;
+      margin: 32px 0;
+    }
+    @media (max-width: 640px) { .two-column-text { column-count: 1; } }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Riyan<span>Insight</span></a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html#home" class="nav-link">Home</a></li>
+        <li><a href="#articles" class="nav-link">Articles</a></li>
+        <li><a href="#media" class="nav-link">Media</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="dark-toggle" id="darkModeToggle" aria-label="Dark mode toggle">
+          <i class="fas fa-moon"></i>
+        </button>
+        <div class="hamburger" id="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container" style="padding-top: 40px;">
+    <div class="article-fullwidth">
+      <span class="hero-tag" style="background: #0f172a; color:white;">🕶️ SAFETY</span>
+      <h1 style="font-size: 3.2rem; margin: 16px 0 8px;">HAZOP dan HAZID</h1>
+      <div class="article-meta-large" style="justify-content: flex-start; gap:50px; margin-bottom:26px;">
+        <span><i class="far fa-user-circle"></i> Riyan Setiawan</span>
+        <span><i class="far fa-calendar-alt"></i> April 13, 2026</span>
+      </div>
+      <img class="preview-img" src="image/hazop.jfif" alt="AR Riyancation" style="width:100%; border-radius: 28px; margin-bottom: 32px;">
+      <div class="article-content" id="articles">
+        <h1>A. HAZOP (Hazard and Operability Study)</h1>
+        <p>HAZOP adalah metode analisis sistematis untuk mengidentifikasi potensi bahaya (hazard) dan masalah operasional (operability) dalam suatu proses industri. Metode ini dilakukan dengan cara mengkaji setiap bagian proses (node) menggunakan kata kunci tertentu (guide words) seperti “more”, “less”, atau “no” untuk menemukan kemungkinan penyimpangan dari kondisi normal.</p>
+
+        <h2>Fungsi HAZOP</h2>
+        <ul style="margin-left: 24px; margin-bottom: 24px;">
+          <li><strong>Mengidentifikasi Potensi Bahaya:</strong> HAZOP membantu menemukan kemungkinan kejadian berbahaya sebelum benar-benar terjadi di lapangan.</li>
+          <li><strong>Menganalisis Penyimpangan Proses:</strong> Setiap deviasi dari kondisi normal dianalisis untuk mengetahui penyebab dan dampaknya.</li>
+          <li><strong>Meningkatkan Keamanan Operasi:</strong> Dengan mengetahui risiko, sistem dapat diperbaiki atau ditambahkan pengaman.</li>
+          <li><strong>Mendukung Desain dan Evaluasi Sistem:</strong> Digunakan pada tahap desain maupun saat evaluasi sistem yang sudah berjalan.</li>
+        </ul>
+
+        <h2>Elemen Penting dalam HAZOP</h2>
+        <p>Dalam metode HAZOP, terdapat beberapa elemen utama yang harus dipahami karena menjadi struktur dasar dalam melakukan analisis. Elemen-elemen ini saling berkaitan dan digunakan untuk mengidentifikasi potensi bahaya secara sistematis, bukan sekadar perkiraan.</p>
+        <h3>1. Node (Titik Analisis)</h3>
+        <p>Node adalah bagian spesifik dari proses yang dianalisis, misalnya satu unit peralatan atau satu segmen aliran. Pembagian node ini penting agar analisis dilakukan secara terfokus dan tidak terlalu luas, sehingga setiap bagian sistem bisa dikaji secara detail.</p>
+
+        <h3>2. Guide Words (Kata Kunci)</h3>
+        <p>Guide words digunakan untuk memicu pemikiran tentang kemungkinan penyimpangan. Contohnya seperti No, More, Less, Reverse, dan As Well As. Kata-kata ini dikombinasikan dengan parameter proses untuk menghasilkan berbagai kemungkinan deviasi.</p>
+
+        <h3>3. Deviation (Penyimpangan)</h3>
+        <p>Deviation adalah kondisi di mana proses tidak berjalan sesuai dengan yang dirancang. Misalnya “no flow” (tidak ada aliran) atau “high pressure” (tekanan terlalu tinggi). Ini adalah inti dari analisis HAZOP karena dari sinilah potensi masalah mulai diidentifikasi.</p>
+
+        <h3>4. Cause (Penyebab)</h3>
+        <p>Setiap deviasi pasti memiliki penyebab, seperti kegagalan pompa, valve tertutup, atau kesalahan operator. Identifikasi penyebab ini penting untuk mengetahui sumber masalah secara teknis.</p>
+
+        <h3>5. Consequence (Dampak)</h3>
+        <p>Bagian ini menjelaskan apa yang akan terjadi jika deviasi tersebut benar-benar terjadi, misalnya ledakan, kebocoran, atau penurunan kualitas produk. Analisis ini penting untuk menilai tingkat bahaya.</p>
+
+        <h3>6. Safeguard (Pengaman)</h3>
+        <p>Safeguard adalah sistem atau tindakan yang sudah ada untuk mencegah atau mengurangi dampak dari deviasi, seperti alarm, sistem shutdown, atau relief valve. Jika safeguard tidak cukup, maka perlu direkomendasikan perbaikan.</p>
+
+        <h2>Cara Kerja HAZOP</h2>
+        <h3>1. Membagi sistem menjadi node</h3>
+        <p>Node biasanya berdasarkan PFD, misalnya satu pipa, satu heat exchanger, atau satu reaktor.</p>
+
+        <h3>2. Menentukan parameter proses</h3>
+        <p>Contoh: flow, pressure, temperature, level.</p>
+
+        <h3>3. Menggunakan guide words</h3>
+        <p>Seperti No, More, Less, Reverse untuk memicu deviasi.</p>
+
+        <h3>4. Identifikasi deviasi</h3>
+        <p>Misalnya: No Flow, High Pressure, Low Temperature.</p>
+
+        <h3>5. Analisis penyebab dan dampak</h3>
+        <p>Cari kenapa bisa terjadi dan apa konsekuensinya.</p>
+
+        <h3>6. Evaluasi safeguard</h3>
+        <p>Apakah sistem pengaman sudah cukup atau perlu tambahan.</p>
+
+        <h1>B. HAZID (Hazard Identification)</h1>
+        <img class="preview-img" src="image/hazid.jfif" alt="AR Riyancation" style="width:100%; border-radius: 28px; gap: 32px; margin-top: 20px;"><br>
+        <p>HAZID (Hazard Identification) adalah metode awal dalam manajemen risiko yang digunakan untuk mengidentifikasi semua potensi bahaya dalam suatu sistem, proses, atau proyek secara menyeluruh. Pendekatannya bersifat luas (broad), biasanya dilakukan melalui diskusi tim, brainstorming, dan pengalaman engineering. Tujuan utamanya bukan langsung menganalisis detail, tetapi memastikan tidak ada potensi bahaya yang terlewat sejak awal desain atau perencanaan.</p>
+
+        <h2>Tujuan dan Fungsi HAZID</h2>
+        <ul style="margin-left: 24px; margin-bottom: 24px;">
+          <li><strong>Mengidentifikasi potensi bahaya sejak awal: </strong>Semua kemungkinan risiko, baik teknis maupun non-teknis, dicatat agar tidak terlewat.</li>
+          <li><strong>Menjadi dasar analisis lanjutan: </strong>Hasil HAZID biasanya digunakan sebagai input untuk metode yang lebih detail seperti HAZOP.</li>
+          <li><strong>Meningkatkan awareness tim: </strong>Semua pihak yang terlibat jadi lebih sadar terhadap potensi risiko dalam sistem.</li>
+          <li><strong>Mendukung desain yang lebih aman: </strong>Dengan mengetahui risiko lebih awal, desain bisa langsung disesuaikan agar lebih safety.</li>
+        </ul>
+
+        <h2>Cara Kerja HAZOP</h2>
+        <h3>1. Menentukan ruang lingkup (scope)</h3>
+        <p>Menentukan sistem atau area mana yang akan dianalisis, misalnya unit reaktor atau sistem perpipaan.</p>
+
+        <h3>2. Membagi sistem menjadi bagian besar</h3>
+        <p>Tidak terlalu detail, cukup per unit atau area utama.</p>
+
+        <h3>3. Identifikasi potensi bahaya</h3>
+        <p>Menggunakan brainstorming, checklist, atau pengalaman proyek sebelumnya.</p>
+
+        <h3>4. Menilai tingkat risiko (risk ranking)</h3>
+        <p>Biasanya menggunakan matriks risiko (low, medium, high).</p>
+
+        <h3>5. Mencatat rekomendasi awal</h3>
+        <p>Jika ditemukan risiko tinggi, langsung diberikan saran mitigasi awal.</p>
+
+        <h2>Perbedaan HAZOP dan HAZID</h2>
+        <p>Meskipun sama-sama digunakan dalam analisis keselamatan, HAZOP dan HAZID memiliki pendekatan dan tujuan yang berbeda. Memahami perbedaan ini penting agar tidak salah dalam penggunaannya.</p>
+        <ul style="margin-left: 24px; margin-bottom: 24px;">
+          <li><strong>HAZID (Hazard Identification):</strong></li>
+          <p>HAZID merupakan tahap awal dalam proses manajemen risiko yang berfokus pada identifikasi semua potensi bahaya secara umum. Analisis ini biasanya dilakukan pada fase awal desain atau perencanaan proyek. Pendekatannya bersifat luas dan tidak terlalu detail, sering menggunakan brainstorming atau diskusi tim untuk mengidentifikasi berbagai kemungkinan risiko. Tujuannya adalah memastikan bahwa semua potensi bahaya sudah terdaftar sebelum masuk ke analisis lebih lanjut.</p>
+          <li><strong>HAZOP (Hazard and Operability Study):</strong></li>
+          <p>HAZOP dilakukan setelah HAZID dan memiliki pendekatan yang jauh lebih detail dan sistematis. Analisis ini berfokus pada penyimpangan proses dengan menggunakan guide words dan dilakukan per node. HAZOP tidak hanya mengidentifikasi bahaya, tetapi juga menganalisis penyebab, dampak, dan sistem pengaman yang ada. Karena sifatnya yang mendalam, HAZOP biasanya digunakan pada tahap desain detail atau evaluasi sistem yang sudah berjalan.</p>
+        <div class="video-wrapper">
+          <video controls>
+            <source src="video/videoplayback6.mp4" type="video/mp4">
+            Browser kamu tidak mendukung video.
+          </video>
+        </div>
+      </div>
+         
+      <!-- Galeri kecil -->
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin: 32px 0;">
+        <img class="preview-img" src="image/A-HAZOP-Analysis-Process-Chart.png" style="border-radius:20px;">
+        <img class="preview-img" src="image/hazid.jpg " style="border-radius:20px;">
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <!-- SIDEBAR -->
+        <aside class="sidebar">
+          <div class="sidebar-widget">
+            <h3><i class="fas fa-fire"></i> Popular posts</h3>
+            <ul class="popular-list">
+              <li><a href="#">The science of effective note-taking</a><span>12k views</span></li>
+              <li><a href="#">Why spaced repetition works</a><span>8.4k views</span></li>
+              <li><a href="#">Blended learning trends 2026</a><span>6.2k views</span></li>
+              <li><a href="#">AI literacy for Riyancators</a><span>5.7k views</span></li>
+            </ul>
+          </div>
+          <div class="sidebar-widget">
+            <h3><i class="fas fa-folder-open"></i> Categories</h3>
+            <ul class="category-list">
+              <li><a href="#">EdTech <span>(14)</span></a></li>
+              <li><a href="#">Pedagogy <span>(9)</span></a></li>
+              <li><a href="#">Research <span>(7)</span></a></li>
+              <li><a href="#">Student life <span>(12)</span></a></li>
+              <li><a href="#">Policy <span>(5)</span></a></li>
+            </ul>
+          </div>
+          <div class="sidebar-widget">
+            <h3><i class="fas fa-tags"></i> Tags</h3>
+            <div class="tag-cloud">
+              <a href="#" class="tag">#learning</a>
+              <a href="#" class="tag">#OER</a>
+              <a href="#" class="tag">#inclusion</a>
+              <a href="#" class="tag">#online</a>
+              <a href="#" class="tag">#STEM</a>
+              <a href="#" class="tag">#literacy</a>
+              <a href="#" class="tag">#future</a>
+              <a href="#" class="tag">#k12</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- CONTENT CARDS SECTION (grid) -->
+    <section class="cards-section fade-on-scroll">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">📚 Artikel Lain</h2>
+          <p class="section-subtitle">Discover more insights, guides and stories</p>
+        </div>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-img">
+              <img class="preview-img" src="image/pfd.jfif" alt="Placeholder article" loading="lazy">
+            </div>
+            <div class="card-content">
+              <span class="card-category">Appendix</span>
+              <h3>Legend of PFD Symbols</h3>
+              <p>Process Flow Diagram (PFD) adalah diagram yang digunakan untuk menggambarkan aliran proses dalam suatu sistem industri, khususnya pada bidang teknik kimia dan proses.</p>
+              <a href="artikel-1.html" class="btn-card">Read more <i class="fas fa-chevron-right"></i></a>
+            </div>
+          </article>
+          <article class="card" >
+            <div class="card-img">
+              <img class="preview-img" src="image/OIP.webp" alt="Placeholder article" loading="lazy">
+            </div>
+            <div class="card-content">
+              <span class="card-category">LINKING</span>
+              <h3>Fastener, Joint, dan Support</h3>
+              <p>Fastener, Joint dan Support sangat penting untuk memastikan komponen yang kita punya bisa tersambung dengan baik.
+              </p>
+              <a href="index.html" class="btn-card">Read more <i class="fas fa-chevron-right"></i></a>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-img">
+              <img class="preview-img" src="image/pipe.webp" alt="Placeholder article" loading="lazy">
+            </div>
+            <div class="card-content">
+              <span class="card-category">PIPING</span>
+              <h3>Pipe SchRiyanle dan Macam-Macam Pewarnaan Pipa (Pipeline Color Coding)</h3>
+              <p>Pipe schRiyanle diklasifikasikan berdasarkan angka schRiyanle yang menunjukkan tingkat ketebalan dinding pipa.</p>
+              <a href="artikel-3.html" class="btn-card">Read more <i class="fas fa-chevron-right"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEDIA SECTION (gallery + video embed) -->
+    <section class="media-section fade-on-scroll" id="media">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">🎬 Media & resources</h2>
+        </div>
+        <div class="media-grid">
+          <div class="gallery">
+            <h3><i class="far fa-images"></i> Image gallery</h3>
+            <div class="gallery-grid">
+              <img class="preview-img" src="image/media2.webp" alt="campus life">
+              <img class="preview-img" src="image/media3.webp" alt="library">
+              <img class="preview-img" src="image/media 4.png" alt="workshop">
+              <img class="preview-img" src="image/fastener & joint.jpg" alt="study group">
+            </div>
+          </div>
+          <div class="featured-video">
+            <h3><i class="fas fa-video"></i> Featured talk</h3>
+              <div class="video-wrapper">
+                <video controls>
+                  <source src="video/videoplayback6.mp4" type="video/mp4">
+                  Browser kamu tidak mendukung video.
+                </video>
+              </div>
+              </div>
+            </div>
+            <p class="video-caption">Memahami Rasio Poisson</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <div id="contact">
+    <footer class="footer" id="about">
+      <div class="container footer-container">
+        <div class="footer-col footer-about">
+          <h3>Riyan<span>Insight</span></h3>
+          <p>Empowering Riyancators and learners with evidence-based insights, tools, and stories. Lorem ipsum dolor sit amet consectetur.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#articles">Articles</a></li>
+            <li><a href="#media">Media</a></li>
+            <li><a href="#">Newsletter</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Subscribe</h4>
+          <p>Get the latest posts in your inbox.</p>
+          <form class="footer-form">
+            <input type="email" placeholder="Your email" aria-label="Email">
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-content">
+          <p>© 2026 Riyan Journal. All rights reserved. — designed for modern learners</p>
+          <div class="footer-links">
+            <a href="#">Accessibility</a>
+            <a href="#">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </footer>
+
+  <div id="imageModal" class="image-modal"> 
+  <span class="close">&times;</span>
+  <img class="preview-img" class="modal-content" id="modalImg">
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
